@@ -3,8 +3,8 @@ let mongoose = require('mongoose');
 let Todo = mongoose.model('Todo', {
     text: {
         type: String,
-        require: true,
-        minLength: 1,
+        required: true,
+        minlength: 1,
         trim: true
     },
     completed: {
