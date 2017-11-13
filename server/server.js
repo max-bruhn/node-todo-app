@@ -1,3 +1,5 @@
+require('./config/config');
+
 const _ = require('lodash');
 // lodash add some useful utils
 const express = require('express');
@@ -11,7 +13,7 @@ const {User} = require('./models/user');
 const app = express();
 
 // if PORT variable exists (heroku) will use it, otherwise 3000 (local)
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 app.use(bodyParser.json());
 
