@@ -154,7 +154,7 @@ app.post('/users/login', (req, res) => {
     let body = _.pick(req.body, ['email', 'password']);
 
     User.findByCredentials(body.email, body.password).then((user) => {
-        // res.send(user);
+ 
         return user.generateAuthToken().then((token) => {
             res.header('x-auth', token).send(user);
         });
